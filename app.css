@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef9f1;
+  color: #183c2d;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 55px;
+  background: rgba(249, 255, 250, 0.96);
+  border-bottom: 1px solid #dce9df;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ================= LOGO ================= */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #3da56f;
+  color: white;
+  font-size: 22px;
+}
+
+.brand h2 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  color: #173b2d;
+}
+
+.brand p {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #718178;
+}
+
+/* ================= NAVIGATION ================= */
+
+.navbar nav {
+  display: flex;
+  gap: 34px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #60776c;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #237c52;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 600px;
+  padding: 90px 25px 80px;
+  background: radial-gradient(
+    circle at 50% 0%,
+    #ffffff 0%,
+    #e9f9ed 40%,
+    #eaf8ed 100%
+  );
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ================= HERO TITLE ================= */
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 1.15;
+  color: #183c2d;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #2d9363;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.hero-text {
+  max-width: 670px;
+  margin: auto;
+  color: #60776c;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* ================= SEARCH ================= */
+
+.search-wrapper {
+  width: min(720px, 95%);
+  margin: 42px auto 18px;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #d5e5db;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(46, 94, 66, 0.08);
+}
+
+.search-icon {
+  margin: 0 12px;
+  font-size: 23px;
+  color: #6b8177;
+}
+
+.search-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #294d3d;
+}
+
+.search-wrapper input::placeholder {
+  color: #84928c;
+}
+
+.search-wrapper button {
+  border: none;
+  background: #237c52;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 13px 27px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-wrapper button:hover {
+  background: #196641;
+  transform: translateY(-1px);
+}
+
+/* ================= POPULAR ================= */
+
+.popular {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.popular > span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #648075;
+}
+
+.medicine-chip {
+  padding: 7px 15px;
+  background: white;
+  border: 1px solid #d3e1d8;
+  border-radius: 20px;
+  color: #294d3d;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.25s;
+}
+
+.medicine-chip:hover {
+  background: #e5f6ea;
+  border-color: #9ac7aa;
+}
+
+/* ================= RESULTS ================= */
+
+.results {
+  max-width: 720px;
+  margin: 35px auto 0;
+  background: white;
+  border: 1px solid #d7e7dc;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(46, 94, 66, 0.08);
+  animation: appear 0.3s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e2eee6;
+}
+
+.results-small {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #6b897a;
+  margin-bottom: 6px;
+}
+
+.results-header h2 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.location {
+  font-size: 13px;
+  color: #668076;
+}
+
+/* ================= PHARMACY ================= */
+
+.pharmacy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 0;
+  border-bottom: 1px solid #e5eee8;
+}
+
+.pharmacy:last-child {
+  border-bottom: none;
+}
+
+.pharmacy h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.pharmacy p {
+  font-size: 13px;
+  color: #718178;
+}
+
+.stock {
+  background: #ddf3e5;
+  color: #237c52;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.stock.low {
+  background: #fff2d9;
+  color: #a36b18;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  padding: 55px 32px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  background: #eef9f1;
+}
+
+.feature-card {
+  min-height: 175px;
+  padding: 32px 26px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d6e6dc;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px rgba(43, 92, 63, 0.06);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(43, 92, 63, 0.1);
+}
+
+.number {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #27845a;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #183c2d;
+  margin-bottom: 13px;
+}
+
+.feature-card p {
+  color: #708078;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 25px 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #dce9df;
+  background: #eef9f1;
+  color: #668075;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .search-wrapper {
+    flex-direction: column;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .search-wrapper input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-wrapper button {
+    width: 100%;
+  }
+
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
